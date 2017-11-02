@@ -218,7 +218,7 @@ pipeline {
                                         if (item.containsKey('conditions')) {
                                             importImage = true
                                             reCheck = false
-                                            openshift.raw("import-image ${it.name()}")
+                                            openshift.raw("import-image --insecure=true ${it.name()}")
                                             sleep(30)
                                         }
                                     }
