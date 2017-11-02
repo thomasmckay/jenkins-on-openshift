@@ -1,0 +1,21 @@
+[katello]
+name=Katello Nightly
+baseurl=https://fedorapeople.org/groups/katello/releases/yum/nightly/katello/el7/x86_64/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-katello
+enabled=1
+gpgcheck=0
+priority=1
+
+[foreman]
+name=Foreman Nightly
+baseurl=http://yum.theforeman.org/nightly/el7/x86_64
+enabled=1
+gpgcheck=0
+priority=1
+
+[plugins]
+name=plugins Nightly
+baseurl=http://yum.theforeman.org/plugins/nightly/el7/x86_64/
+enabled=1
+gpgcheck=0
+priority=1

@@ -22,12 +22,19 @@ pipeline {
             }
         }
 
+        stage('Dev - Build Base Image') {
+            agent {
+                dockerfile {
+                    dir 'hammer'
+                }
+            }
+        }
+
         /** Dev - MochaJS Test
          *
          *  Using agent labeled `nodejs` which is defined in the Kubernetes Jenkins plugin will
          *  launch a nodejs pod to run the steps section actions.
          */
-
         stage('Dev - MochaJS Test') {
             agent {
                 label 'nodejs'
