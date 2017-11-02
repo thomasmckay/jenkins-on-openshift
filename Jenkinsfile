@@ -5,6 +5,7 @@
 
 pipeline {
     agent any
+
     stages {
 
         /** Create Credentials
@@ -27,6 +28,9 @@ pipeline {
                 dockerfile {
                     dir 'hammer'
                 }
+            }
+            steps {
+              sh 'hammer --version'
             }
         }
 
